@@ -25,6 +25,10 @@ let bar = Foo {
 assert!(bar.is_empty());
 ```
 
+### Acknowledgements
+
+This crate was made possible by the excellent [blog series](https://blog.turbo.fish/proc-macro-simple-derive/) on derive macros by Jonas Platte.  
+
 ### License
 Licensed under either of
 
