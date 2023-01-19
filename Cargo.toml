@@ -1,0 +1,7 @@
+[workspace]
+
+members = [
+    "is_empty",
+    "derive_is_empty",
+]
+
