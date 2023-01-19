@@ -1,4 +1,6 @@
 # is_empty
+
+![example workflow](https://github.com/puilp0502/is_empty/actions/workflows/test.yml/badge.svg)  
 Easily check if the struct is empty.
 
 ## Usage
