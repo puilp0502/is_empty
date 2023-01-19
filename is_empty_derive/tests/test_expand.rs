@@ -1,4 +1,4 @@
-use derive_is_empty::IsEmpty;
+use is_empty_derive::IsEmpty;
 
 mod is_empty {
     pub trait IsEmpty {

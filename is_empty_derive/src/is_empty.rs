@@ -1,7 +1,7 @@
 use proc_macro2::TokenStream;
 use quote::quote;
 use syn::{
-    Attribute, Data, DataStruct, DeriveInput, Error, ExprPath, Fields, Ident, Lit, Meta, NestedMeta,
+    Attribute, Data, DataStruct, DeriveInput, Error, ExprPath, Fields, Lit, Meta, NestedMeta,
 };
 
 fn get_is_empty_if_attr(attr: &Attribute) -> syn::Result<Option<ExprPath>> {

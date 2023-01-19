@@ -2,7 +2,7 @@
 proc-macro = true
 
 [package]
-name = "derive_is_empty"
+name = "is_empty_derive"
 version = "0.1.0"
 edition = "2021"
 

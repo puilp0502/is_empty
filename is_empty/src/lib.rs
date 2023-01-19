@@ -1,4 +1,4 @@
-pub use derive_is_empty::*;
+pub use is_empty_derive::*;
 
 pub trait IsEmpty {
     fn is_empty(&self) -> bool;
