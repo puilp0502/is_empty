@@ -1,5 +1,29 @@
 # is_empty
-Check if struct contains only "empty-like" values.
+Easily check if the struct is empty.
+
+## Usage
+
+```rust
+use is_empty::IsEmpty;
+
+#[derive(IsEmpty)]
+struct Foo {
+    a: Option<String>,
+    b: Option<String>,
+}
+
+let foo = Foo {
+    a: Some("a".to_string()),
+    b: None,
+};
+assert!(!foo.is_empty());
+
+let bar = Foo {
+   a: None,
+   b: None,
+};
+assert!(bar.is_empty());
+```
 
 ### License
 Licensed under either of
