@@ -5,6 +5,10 @@ proc-macro = true
 name = "is_empty_derive"
 version = "0.1.0"
 edition = "2021"
+license = "MIT OR Apache-2.0"
+description = "Easily check if the struct is empty."
+documentation = "https://docs.rs/is_empty"
+repository = "https://github.com/puilp0502/is_empty"
 
 [dependencies]
 proc-macro2 = "1.0.50"

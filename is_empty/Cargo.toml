@@ -2,8 +2,12 @@
 name = "is_empty"
 version = "0.1.0"
 edition = "2021"
-
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+license = "MIT OR Apache-2.0"
+description = "Easily check if the struct is empty."
+documentation = "https://docs.rs/is_empty"
+repository = "https://github.com/puilp0502/is_empty"
+readme = "../README.md"
+keywords = ["serde", "macro", "derive", "is_empty"]
 
 [dependencies]
 is_empty_derive = { version = "0.1.0", path = "../is_empty_derive" }
