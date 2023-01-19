@@ -133,3 +133,22 @@ where
 {
     t.is_empty()
 }
+
+/// Check if the `Option<T>` is really empty.  
+///
+/// [is_empty] returns false for `Some(T)`, even if `T` is empty.
+/// This function inspects the struct wrapped inside `Option::Some<T>`, and returns true if it is empty.
+/// (Of course, it returns true for `None`.)
+///
+/// This function can be used in two ways:
+/// - in a `#[is_empty(if = "is_empty::is_option_really_empty")]` attribute,
+/// - in a `#[serde(skip_serializing_if = "is_empty::is_option_really_empty")]` attribute.
+pub fn is_option_really_empty<T>(t: &Option<T>) -> bool
+where
+    T: IsEmpty,
+{
+    match t {
+        None => true,
+        Some(t) => t.is_empty(),
+    }
+}
