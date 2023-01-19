@@ -1,14 +1,11 @@
-pub fn add(left: usize, right: usize) -> usize {
-    left + right
-}
+mod is_empty;
+use is_empty::expand_is_empty;
 
-#[cfg(test)]
-mod tests {
-    use super::*;
+use proc_macro::TokenStream;
+use syn::{parse_macro_input, DeriveInput};
 
-    #[test]
-    fn it_works() {
-        let result = add(2, 2);
-        assert_eq!(result, 4);
-    }
+#[proc_macro_derive(IsEmpty)]
+pub fn derive_is_empty(input: TokenStream) -> TokenStream {
+    let input = parse_macro_input!(input as DeriveInput);
+    expand_is_empty(input).into()
 }
