@@ -1,6 +1,13 @@
 # is_empty
 
-![example workflow](https://github.com/puilp0502/is_empty/actions/workflows/test.yml/badge.svg)  
+[![CI status]][actions]
+[![Docs Badge]][docs]
+
+[CI status]: https://github.com/puilp0502/is_empty/actions/workflows/test.yml/badge.svg
+[actions]: https://github.com/puilp0502/is_empty/actions/workflows/test.yml
+[Docs Badge]: https://img.shields.io/docsrs/is_empty
+[docs]: https://docs.rs/is_empty/latest
+
 Easily check if the struct is empty.
 
 ## Usage
