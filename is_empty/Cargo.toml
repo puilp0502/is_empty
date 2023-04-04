@@ -9,6 +9,9 @@ repository = "https://github.com/puilp0502/is_empty"
 readme = "../README.md"
 keywords = ["serde", "macro", "derive", "is_empty"]
 
+[features]
+std_impls = []
+
 [dependencies]
 is_empty_derive = { version = "0.1.0", path = "../is_empty_derive" }
 
