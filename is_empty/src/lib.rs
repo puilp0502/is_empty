@@ -92,6 +92,9 @@
 //!
 pub use is_empty_derive::*;
 
+#[cfg(feature = "std_impls")]
+pub mod std_impls;
+
 /// A trait for checking if a struct is empty.
 /// See the [crate-level documentation](crate) for more information.
 pub trait IsEmpty {
