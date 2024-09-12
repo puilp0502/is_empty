@@ -106,6 +106,12 @@ impl<T> IsEmpty for std::option::Option<T> {
     }
 }
 
+impl IsEmpty for () {
+    fn is_empty(&self) -> bool {
+        true
+    }
+}
+
 /// Thin wrapper function around [IsEmpty::is_empty]. Use it with serde's skip_serializing_if attribute.
 /// ```
 /// use is_empty::IsEmpty;
