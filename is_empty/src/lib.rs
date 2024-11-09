@@ -90,6 +90,44 @@
 //! assert_eq!(serde_json::to_string(&root).unwrap(), "{}");
 //! ```
 //!
+//! For support for additional types, enable "std_impls" feature:
+//!```
+//! # mod test_std_impl {
+//! #![cfg(feature = "std_impls")]
+//! # use std::collections::{HashSet, HashMap};
+//! # use is_empty::IsEmpty;
+//! # use serde::{Serialize, Deserialize};
+//!
+//! # fn main() {
+//! #[derive(Serialize, Deserialize, IsEmpty)]
+//! struct Bar {
+//!     owned_string: String,
+//!     os_string: std::ffi::OsString,
+//!
+//!     vec: Vec<String>,
+//!     set: HashSet<String>,
+//!     map: HashMap<String, String>
+//! }
+//!
+//! let bar = Bar {
+//!   owned_string: String::new(),
+//!   os_string: std::ffi::OsString::new(),
+//!   vec: vec![],
+//!   set: HashSet::new(),
+//!   map: HashMap::new(),
+//! };
+//!
+//! assert!(bar.is_empty())
+//! # }
+//! # }
+//! # #[cfg(not(feature = "std_impls"))]
+//! # mod test_std_impl {
+//! # fn main() {}
+//! # }
+//!
+//!
+//!
+
 pub use is_empty_derive::*;
 
 #[cfg(feature = "std_impls")]
