@@ -2,6 +2,13 @@ use super::*;
 
 use std::collections::*;
 
+impl IsEmpty for std::ffi::OsString {
+    fn is_empty(&self) -> bool {
+        let os_str = self as &std::ffi::OsStr;
+        os_str.is_empty()
+    }
+}
+
 macro_rules! impl_simple {
     ($($t:ty),+) => {
 
@@ -32,7 +39,7 @@ macro_rules! impl_generic_one{
     };
 }
 
-impl_generic_one!(BTreeSet<K>, HashSet<K>, LinkedList<K>, VecDeque<K>);
+impl_generic_one!(BTreeSet<K>, HashSet<K>, LinkedList<K>, VecDeque<K>, Vec<K>);
 
 macro_rules! impl_generic_two{
 

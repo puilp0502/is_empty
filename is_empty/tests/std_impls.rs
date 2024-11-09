@@ -32,4 +32,11 @@ mod test {
         map.insert(1);
         assert!(!IsEmpty::is_empty(&map));
     }
+    #[test]
+    fn vec_is_empty() {
+        let mut vec = Vec::<u32>::new();
+        assert!(IsEmpty::is_empty(&vec));
+        vec.push(1);
+        assert!(!IsEmpty::is_empty(&vec));
+    }
 }
